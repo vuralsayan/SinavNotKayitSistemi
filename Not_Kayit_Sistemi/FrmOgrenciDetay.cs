@@ -36,6 +36,15 @@ namespace Not_Kayit_Sistemi
                 LblSınav3.Text = dr[6].ToString();
                 LblOrtalama.Text = dr[7].ToString();
                 LblDurum.Text = dr[8].ToString();
+
+                if (dr[8].ToString() == "True")
+                {
+                    LblDurum.Text = "Geçti";
+                }
+                if (dr[8].ToString() == "False")
+                {
+                    LblDurum.Text = "Kaldı";
+                }
             }
             baglanti.Close();
         }
