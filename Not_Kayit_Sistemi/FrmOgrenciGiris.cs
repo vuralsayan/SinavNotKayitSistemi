@@ -16,5 +16,13 @@ namespace Not_Kayit_Sistemi
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmOgrenciDetay frm = new FrmOgrenciDetay();
+            frm.numara = MskOgrenciNumara.Text;
+            frm.Show();
+            
+        }
     }
 }

@@ -16,5 +16,11 @@ namespace Not_Kayit_Sistemi
         {
             InitializeComponent();
         }
+
+        public string numara;
+        private void FrmOgrenciDetay_Load(object sender, EventArgs e)
+        {
+            LblNumara.Text = numara;
+        }
     }
 }

@@ -194,6 +194,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmOgrenciDetay";
             this.Text = "Öğrenci Not Kayıt Sistemi";
+            this.Load += new System.EventHandler(this.FrmOgrenciDetay_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
