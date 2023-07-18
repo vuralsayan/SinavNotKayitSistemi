@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmOgretmenDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOgretmenDetay.Designer.cs">
+      <DependentUpon>FrmOgretmenDetay.cs</DependentUpon>
+    </Compile>
     <Compile Include="OgrenciGiris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmOgretmenDetay.resx">
+      <DependentUpon>FrmOgretmenDetay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OgrenciGiris.resx">
       <DependentUpon>OgrenciGiris.cs</DependentUpon>
     </EmbeddedResource>
