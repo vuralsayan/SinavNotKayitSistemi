@@ -20,24 +20,36 @@ namespace Not_Kayit_Sistemi
 
         SqlConnection baglanti = new SqlConnection(@"Data Source=Vural\SQLEXPRESS;Initial Catalog=DbNotKayit;Integrated Security=True");
 
+        private void Bilgiler()
+        {
+            LblGecenSayisi.Text = dbNotKayitDataSet.TBLDERS.Count(x => x.DURUM == true).ToString();
+            LblKalanSayisi.Text = dbNotKayitDataSet.TBLDERS.Count(x => x.DURUM == false).ToString();
+            LblOrtalama.Text = dbNotKayitDataSet.TBLDERS.Average(x => x.ORTALAMA).ToString("0.00"); 
+        }
+
+
         private void FrmOgretmenDetay_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dbNotKayitDataSet.TBLDERS' table. You can move, or remove it, as needed.
             this.tBLDERSTableAdapter.Fill(this.dbNotKayitDataSet.TBLDERS);
+            Bilgiler();
 
         }
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("INSERT INTO TBLDERS (OGRNUMARA, OGRAD, OGRSOYAD) VALUES(@P1,@P2,@P3)",baglanti);
-            komut.Parameters.AddWithValue("@P1", MskNumara.Text);    
+            SqlCommand komut = new SqlCommand("INSERT INTO TBLDERS (OGRNUMARA, OGRAD, OGRSOYAD, DURUM) VALUES(@P1,@P2,@P3,@P4)", baglanti);
+            komut.Parameters.AddWithValue("@P1", MskNumara.Text);
             komut.Parameters.AddWithValue("@P2", TxtAd.Text);
             komut.Parameters.AddWithValue("@P3", TxtSoyad.Text);
+            komut.Parameters.AddWithValue("@P4", false);    
+
             komut.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Öğrenci Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.tBLDERSTableAdapter.Fill(this.dbNotKayitDataSet.TBLDERS);
+            Bilgiler();
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -48,6 +60,10 @@ namespace Not_Kayit_Sistemi
             TxtSinav1.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             TxtSinav2.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             TxtSinav3.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            LblOrtalama.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+            label9.Text = "Öğrenci Ortalama";
+
         }
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
@@ -71,7 +87,7 @@ namespace Not_Kayit_Sistemi
             }
 
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("UPDATE TBLDERS SET OGRS1=@P1, OGRS2=@P2, OGRS3=@P3, ORTALAMA=@P4, DURUM=@P5 WHERE OGRNUMARA=@P6",baglanti);
+            SqlCommand komut = new SqlCommand("UPDATE TBLDERS SET OGRS1=@P1, OGRS2=@P2, OGRS3=@P3, ORTALAMA=@P4, DURUM=@P5 WHERE OGRNUMARA=@P6", baglanti);
             komut.Parameters.AddWithValue("@P1", TxtSinav1.Text);
             komut.Parameters.AddWithValue("@P2", TxtSinav2.Text);
             komut.Parameters.AddWithValue("@P3", TxtSinav3.Text);
@@ -82,7 +98,8 @@ namespace Not_Kayit_Sistemi
             baglanti.Close();
             MessageBox.Show("Öğrenci Notları Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.tBLDERSTableAdapter.Fill(this.dbNotKayitDataSet.TBLDERS);
-            
+            Bilgiler();
+
         }
     }
 }

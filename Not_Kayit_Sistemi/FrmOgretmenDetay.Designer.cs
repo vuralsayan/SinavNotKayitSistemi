@@ -243,7 +243,7 @@
             // LblKalanSayisi
             // 
             this.LblKalanSayisi.AutoSize = true;
-            this.LblKalanSayisi.Location = new System.Drawing.Point(161, 109);
+            this.LblKalanSayisi.Location = new System.Drawing.Point(170, 106);
             this.LblKalanSayisi.Name = "LblKalanSayisi";
             this.LblKalanSayisi.Size = new System.Drawing.Size(34, 24);
             this.LblKalanSayisi.TabIndex = 8;
@@ -252,7 +252,7 @@
             // LblGecenSayisi
             // 
             this.LblGecenSayisi.AutoSize = true;
-            this.LblGecenSayisi.Location = new System.Drawing.Point(161, 76);
+            this.LblGecenSayisi.Location = new System.Drawing.Point(170, 73);
             this.LblGecenSayisi.Name = "LblGecenSayisi";
             this.LblGecenSayisi.Size = new System.Drawing.Size(34, 24);
             this.LblGecenSayisi.TabIndex = 7;
@@ -261,7 +261,7 @@
             // LblOrtalama
             // 
             this.LblOrtalama.AutoSize = true;
-            this.LblOrtalama.Location = new System.Drawing.Point(161, 40);
+            this.LblOrtalama.Location = new System.Drawing.Point(170, 37);
             this.LblOrtalama.Name = "LblOrtalama";
             this.LblOrtalama.Size = new System.Drawing.Size(34, 24);
             this.LblOrtalama.TabIndex = 6;
@@ -270,7 +270,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(30, 109);
+            this.label8.Location = new System.Drawing.Point(39, 106);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 24);
             this.label8.TabIndex = 5;
@@ -279,7 +279,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(26, 73);
+            this.label7.Location = new System.Drawing.Point(35, 70);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(129, 24);
             this.label7.TabIndex = 4;
@@ -288,11 +288,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(55, 40);
+            this.label9.Location = new System.Drawing.Point(6, 37);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 24);
+            this.label9.Size = new System.Drawing.Size(158, 24);
             this.label9.TabIndex = 3;
-            this.label9.Text = "Ortalama:";
+            this.label9.Text = "Genel Ortalama:";
             // 
             // groupBox4
             // 
