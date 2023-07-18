@@ -16,5 +16,12 @@ namespace Not_Kayit_Sistemi
         {
             InitializeComponent();
         }
+
+        private void FrmOgretmenDetay_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dbNotKayitDataSet.TBLDERS' table. You can move, or remove it, as needed.
+            this.tBLDERSTableAdapter.Fill(this.dbNotKayitDataSet.TBLDERS);
+
+        }
     }
 }
