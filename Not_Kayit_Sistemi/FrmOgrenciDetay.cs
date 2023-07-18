@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Not_Kayit_Sistemi
 {
@@ -18,6 +19,7 @@ namespace Not_Kayit_Sistemi
         }
 
         public string numara;
+        SqlConnection baglanti = new SqlConnection(@"Data Source=Vural\\SQLEXPRESS;Initial Catalog=DbNotKayit;Integrated Security=True");
         private void FrmOgrenciDetay_Load(object sender, EventArgs e)
         {
             LblNumara.Text = numara;
