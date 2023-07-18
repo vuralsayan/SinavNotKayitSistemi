@@ -1,6 +1,6 @@
 ﻿namespace Not_Kayit_Sistemi
 {
-    partial class OgrenciGiris
+    partial class FrmOgrenciGiris
     {
         /// <summary>
         /// Required designer variable.

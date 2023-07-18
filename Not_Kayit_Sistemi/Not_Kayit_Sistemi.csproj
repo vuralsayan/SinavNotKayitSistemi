@@ -52,11 +52,11 @@
     <Compile Include="FrmOgretmenDetay.Designer.cs">
       <DependentUpon>FrmOgretmenDetay.cs</DependentUpon>
     </Compile>
-    <Compile Include="OgrenciGiris.cs">
+    <Compile Include="FrmOgrenciGiris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OgrenciGiris.Designer.cs">
-      <DependentUpon>OgrenciGiris.cs</DependentUpon>
+    <Compile Include="FrmOgrenciGiris.Designer.cs">
+      <DependentUpon>FrmOgrenciGiris.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmOgrenciDetay.cs">
       <SubType>Form</SubType>
@@ -69,8 +69,8 @@
     <EmbeddedResource Include="FrmOgretmenDetay.resx">
       <DependentUpon>FrmOgretmenDetay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OgrenciGiris.resx">
-      <DependentUpon>OgrenciGiris.cs</DependentUpon>
+    <EmbeddedResource Include="FrmOgrenciGiris.resx">
+      <DependentUpon>FrmOgrenciGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmOgrenciDetay.resx">
       <DependentUpon>FrmOgrenciDetay.cs</DependentUpon>

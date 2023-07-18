@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Not_Kayit_Sistemi
 {
-    public partial class OgrenciGiris : Form
+    public partial class FrmOgrenciGiris : Form
     {
-        public OgrenciGiris()
+        public FrmOgrenciGiris()
         {
             InitializeComponent();
         }
