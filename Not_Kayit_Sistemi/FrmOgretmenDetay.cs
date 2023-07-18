@@ -39,5 +39,12 @@ namespace Not_Kayit_Sistemi
             MessageBox.Show("Öğrenci Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.tBLDERSTableAdapter.Fill(this.dbNotKayitDataSet.TBLDERS);
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TxtSinav1.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            TxtSinav2.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            TxtSinav3.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString()
+        }
     }
 }

@@ -39,12 +39,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.TxtSınav3 = new System.Windows.Forms.TextBox();
+            this.TxtSinav3 = new System.Windows.Forms.TextBox();
             this.BtnGuncelle = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxtSınav2 = new System.Windows.Forms.TextBox();
+            this.TxtSinav2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.TxtSınav1 = new System.Windows.Forms.TextBox();
+            this.TxtSinav1 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.LblKalanSayisi = new System.Windows.Forms.Label();
             this.LblGecenSayisi = new System.Windows.Forms.Label();
@@ -154,12 +154,12 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.TxtSınav3);
+            this.groupBox2.Controls.Add(this.TxtSinav3);
             this.groupBox2.Controls.Add(this.BtnGuncelle);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.TxtSınav2);
+            this.groupBox2.Controls.Add(this.TxtSinav2);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.TxtSınav1);
+            this.groupBox2.Controls.Add(this.TxtSinav1);
             this.groupBox2.Location = new System.Drawing.Point(373, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(355, 225);
@@ -176,12 +176,12 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Sınav 3:";
             // 
-            // TxtSınav3
+            // TxtSinav3
             // 
-            this.TxtSınav3.Location = new System.Drawing.Point(109, 112);
-            this.TxtSınav3.Name = "TxtSınav3";
-            this.TxtSınav3.Size = new System.Drawing.Size(170, 30);
-            this.TxtSınav3.TabIndex = 6;
+            this.TxtSinav3.Location = new System.Drawing.Point(109, 112);
+            this.TxtSinav3.Name = "TxtSinav3";
+            this.TxtSinav3.Size = new System.Drawing.Size(170, 30);
+            this.TxtSinav3.TabIndex = 6;
             // 
             // BtnGuncelle
             // 
@@ -201,12 +201,12 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Sınav 2:";
             // 
-            // TxtSınav2
+            // TxtSinav2
             // 
-            this.TxtSınav2.Location = new System.Drawing.Point(109, 73);
-            this.TxtSınav2.Name = "TxtSınav2";
-            this.TxtSınav2.Size = new System.Drawing.Size(170, 30);
-            this.TxtSınav2.TabIndex = 4;
+            this.TxtSinav2.Location = new System.Drawing.Point(109, 73);
+            this.TxtSinav2.Name = "TxtSinav2";
+            this.TxtSinav2.Size = new System.Drawing.Size(170, 30);
+            this.TxtSinav2.TabIndex = 4;
             // 
             // label5
             // 
@@ -217,12 +217,12 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Sınav 1:";
             // 
-            // TxtSınav1
+            // TxtSinav1
             // 
-            this.TxtSınav1.Location = new System.Drawing.Point(109, 37);
-            this.TxtSınav1.Name = "TxtSınav1";
-            this.TxtSınav1.Size = new System.Drawing.Size(170, 30);
-            this.TxtSınav1.TabIndex = 2;
+            this.TxtSinav1.Location = new System.Drawing.Point(109, 37);
+            this.TxtSinav1.Name = "TxtSinav1";
+            this.TxtSinav1.Size = new System.Drawing.Size(170, 30);
+            this.TxtSinav1.TabIndex = 2;
             // 
             // groupBox3
             // 
@@ -325,6 +325,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1071, 270);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // oGRIDDataGridViewTextBoxColumn
             // 
@@ -445,12 +446,12 @@
         private System.Windows.Forms.Button BtnKaydet;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox TxtSınav3;
+        private System.Windows.Forms.TextBox TxtSinav3;
         private System.Windows.Forms.Button BtnGuncelle;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TxtSınav2;
+        private System.Windows.Forms.TextBox TxtSinav2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TxtSınav1;
+        private System.Windows.Forms.TextBox TxtSinav1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label LblKalanSayisi;
         private System.Windows.Forms.Label LblGecenSayisi;
