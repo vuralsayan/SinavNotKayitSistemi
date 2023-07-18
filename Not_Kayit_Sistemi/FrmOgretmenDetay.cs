@@ -24,7 +24,7 @@ namespace Not_Kayit_Sistemi
         {
             LblGecenSayisi.Text = dbNotKayitDataSet.TBLDERS.Count(x => x.DURUM == true).ToString();
             LblKalanSayisi.Text = dbNotKayitDataSet.TBLDERS.Count(x => x.DURUM == false).ToString();
-            LblOrtalama.Text = dbNotKayitDataSet.TBLDERS.Average(x => x.ORTALAMA).ToString("0.00"); 
+            LblOrtalama.Text = dbNotKayitDataSet.TBLDERS.Average(x => x.ORTALAMA).ToString("0.00");
         }
 
 
@@ -39,16 +39,20 @@ namespace Not_Kayit_Sistemi
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("INSERT INTO TBLDERS (OGRNUMARA, OGRAD, OGRSOYAD, DURUM) VALUES(@P1,@P2,@P3,@P4)", baglanti);
+            SqlCommand komut = new SqlCommand("INSERT INTO TBLDERS (OGRNUMARA, OGRAD, OGRSOYAD, DURUM, ORTALAMA, OGRS1, OGRS2, OGRS3) VALUES(@P1,@P2,@P3,@P4,@P5,@P6,@P7,@P8)", baglanti);
             komut.Parameters.AddWithValue("@P1", MskNumara.Text);
             komut.Parameters.AddWithValue("@P2", TxtAd.Text);
             komut.Parameters.AddWithValue("@P3", TxtSoyad.Text);
-            komut.Parameters.AddWithValue("@P4", false);    
-
+            komut.Parameters.AddWithValue("@P4", false);
+            komut.Parameters.AddWithValue("@P5", ortalama.ToString());
+            komut.Parameters.AddWithValue("@P6", TxtSinav1.Text);
+            komut.Parameters.AddWithValue("@P7", TxtSinav2.Text);
+            komut.Parameters.AddWithValue("@P8", TxtSinav3.Text);
             komut.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Öğrenci Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.tBLDERSTableAdapter.Fill(this.dbNotKayitDataSet.TBLDERS);
+            label9.Text = "Genel Ortalama";
             Bilgiler();
         }
 
@@ -65,11 +69,11 @@ namespace Not_Kayit_Sistemi
             label9.Text = "Öğrenci Ortalama";
 
         }
-
+        public double ortalama = 0;
+        public double sinav1, sinav2, sinav3;
+        public string durum;
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
-            double ortalama, sinav1, sinav2, sinav3;
-            string durum;
             sinav1 = Convert.ToDouble(TxtSinav1.Text);
             sinav2 = Convert.ToDouble(TxtSinav2.Text);
             sinav3 = Convert.ToDouble(TxtSinav3.Text);
