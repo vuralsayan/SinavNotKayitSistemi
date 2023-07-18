@@ -16,7 +16,7 @@ namespace Not_Kayit_Sistemi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OgrenciGiris());
+            Application.Run(new FrmOgrenciGiris());
         }
     }
 }
