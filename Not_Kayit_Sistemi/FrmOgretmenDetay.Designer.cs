@@ -30,33 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnKaydet = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtSoyad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.TxtAd = new System.Windows.Forms.TextBox();
+            this.MskNumara = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.TxtSınav3 = new System.Windows.Forms.TextBox();
+            this.BtnGuncelle = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtSınav2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtSınav1 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.LblKalanSayisi = new System.Windows.Forms.Label();
+            this.LblGecenSayisi = new System.Windows.Forms.Label();
+            this.LblOrtalama = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dbNotKayitDataSet = new Not_Kayit_Sistemi.DbNotKayitDataSet();
-            this.tBLDERSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tBLDERSTableAdapter = new Not_Kayit_Sistemi.DbNotKayitDataSetTableAdapters.TBLDERSTableAdapter();
             this.oGRIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oGRNUMARADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oGRADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,23 +63,26 @@
             this.oGRS3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oRTALAMADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dURUMDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tBLDERSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbNotKayitDataSet = new Not_Kayit_Sistemi.DbNotKayitDataSet();
+            this.tBLDERSTableAdapter = new Not_Kayit_Sistemi.DbNotKayitDataSetTableAdapters.TBLDERSTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbNotKayitDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLDERSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbNotKayitDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.BtnKaydet);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.TxtSoyad);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
+            this.groupBox1.Controls.Add(this.TxtAd);
+            this.groupBox1.Controls.Add(this.MskNumara);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -91,14 +91,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Öğrenci Ekle";
             // 
-            // button1
+            // BtnKaydet
             // 
-            this.button1.Location = new System.Drawing.Point(114, 145);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 45);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Öğrenci Kaydet";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnKaydet.Location = new System.Drawing.Point(114, 145);
+            this.BtnKaydet.Name = "BtnKaydet";
+            this.BtnKaydet.Size = new System.Drawing.Size(170, 45);
+            this.BtnKaydet.TabIndex = 1;
+            this.BtnKaydet.Text = "Öğrenci Kaydet";
+            this.BtnKaydet.UseVisualStyleBackColor = true;
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // label3
             // 
@@ -109,12 +110,12 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Soyad:";
             // 
-            // textBox2
+            // TxtSoyad
             // 
-            this.textBox2.Location = new System.Drawing.Point(114, 109);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 30);
-            this.textBox2.TabIndex = 4;
+            this.TxtSoyad.Location = new System.Drawing.Point(114, 109);
+            this.TxtSoyad.Name = "TxtSoyad";
+            this.TxtSoyad.Size = new System.Drawing.Size(170, 30);
+            this.TxtSoyad.TabIndex = 4;
             // 
             // label2
             // 
@@ -125,21 +126,21 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Ad:";
             // 
-            // textBox1
+            // TxtAd
             // 
-            this.textBox1.Location = new System.Drawing.Point(114, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 30);
-            this.textBox1.TabIndex = 2;
+            this.TxtAd.Location = new System.Drawing.Point(114, 73);
+            this.TxtAd.Name = "TxtAd";
+            this.TxtAd.Size = new System.Drawing.Size(170, 30);
+            this.TxtAd.TabIndex = 2;
             // 
-            // maskedTextBox1
+            // MskNumara
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(114, 37);
-            this.maskedTextBox1.Mask = "0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(170, 30);
-            this.maskedTextBox1.TabIndex = 1;
-            this.maskedTextBox1.ValidatingType = typeof(int);
+            this.MskNumara.Location = new System.Drawing.Point(114, 37);
+            this.MskNumara.Mask = "0000";
+            this.MskNumara.Name = "MskNumara";
+            this.MskNumara.Size = new System.Drawing.Size(170, 30);
+            this.MskNumara.TabIndex = 1;
+            this.MskNumara.ValidatingType = typeof(int);
             // 
             // label1
             // 
@@ -153,12 +154,12 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.TxtSınav3);
+            this.groupBox2.Controls.Add(this.BtnGuncelle);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.TxtSınav2);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.TxtSınav1);
             this.groupBox2.Location = new System.Drawing.Point(373, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(355, 225);
@@ -175,21 +176,21 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Sınav 3:";
             // 
-            // textBox5
+            // TxtSınav3
             // 
-            this.textBox5.Location = new System.Drawing.Point(109, 112);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(170, 30);
-            this.textBox5.TabIndex = 6;
+            this.TxtSınav3.Location = new System.Drawing.Point(109, 112);
+            this.TxtSınav3.Name = "TxtSınav3";
+            this.TxtSınav3.Size = new System.Drawing.Size(170, 30);
+            this.TxtSınav3.TabIndex = 6;
             // 
-            // button2
+            // BtnGuncelle
             // 
-            this.button2.Location = new System.Drawing.Point(109, 148);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(170, 45);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Güncelle";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Location = new System.Drawing.Point(109, 148);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.Size = new System.Drawing.Size(170, 45);
+            this.BtnGuncelle.TabIndex = 1;
+            this.BtnGuncelle.Text = "Güncelle";
+            this.BtnGuncelle.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -200,12 +201,12 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Sınav 2:";
             // 
-            // textBox3
+            // TxtSınav2
             // 
-            this.textBox3.Location = new System.Drawing.Point(109, 73);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(170, 30);
-            this.textBox3.TabIndex = 4;
+            this.TxtSınav2.Location = new System.Drawing.Point(109, 73);
+            this.TxtSınav2.Name = "TxtSınav2";
+            this.TxtSınav2.Size = new System.Drawing.Size(170, 30);
+            this.TxtSınav2.TabIndex = 4;
             // 
             // label5
             // 
@@ -216,18 +217,18 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Sınav 1:";
             // 
-            // textBox4
+            // TxtSınav1
             // 
-            this.textBox4.Location = new System.Drawing.Point(109, 37);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(170, 30);
-            this.textBox4.TabIndex = 2;
+            this.TxtSınav1.Location = new System.Drawing.Point(109, 37);
+            this.TxtSınav1.Name = "TxtSınav1";
+            this.TxtSınav1.Size = new System.Drawing.Size(170, 30);
+            this.TxtSınav1.TabIndex = 2;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.LblKalanSayisi);
+            this.groupBox3.Controls.Add(this.LblGecenSayisi);
+            this.groupBox3.Controls.Add(this.LblOrtalama);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label9);
@@ -238,32 +239,32 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Durum";
             // 
-            // label12
+            // LblKalanSayisi
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(161, 109);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 24);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "00";
+            this.LblKalanSayisi.AutoSize = true;
+            this.LblKalanSayisi.Location = new System.Drawing.Point(161, 109);
+            this.LblKalanSayisi.Name = "LblKalanSayisi";
+            this.LblKalanSayisi.Size = new System.Drawing.Size(34, 24);
+            this.LblKalanSayisi.TabIndex = 8;
+            this.LblKalanSayisi.Text = "00";
             // 
-            // label11
+            // LblGecenSayisi
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(161, 76);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(34, 24);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "00";
+            this.LblGecenSayisi.AutoSize = true;
+            this.LblGecenSayisi.Location = new System.Drawing.Point(161, 76);
+            this.LblGecenSayisi.Name = "LblGecenSayisi";
+            this.LblGecenSayisi.Size = new System.Drawing.Size(34, 24);
+            this.LblGecenSayisi.TabIndex = 7;
+            this.LblGecenSayisi.Text = "00";
             // 
-            // label10
+            // LblOrtalama
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(161, 40);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(34, 24);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "00";
+            this.LblOrtalama.AutoSize = true;
+            this.LblOrtalama.Location = new System.Drawing.Point(161, 40);
+            this.LblOrtalama.Name = "LblOrtalama";
+            this.LblOrtalama.Size = new System.Drawing.Size(34, 24);
+            this.LblOrtalama.TabIndex = 6;
+            this.LblOrtalama.Text = "00";
             // 
             // label8
             // 
@@ -324,20 +325,6 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1071, 270);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // dbNotKayitDataSet
-            // 
-            this.dbNotKayitDataSet.DataSetName = "DbNotKayitDataSet";
-            this.dbNotKayitDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tBLDERSBindingSource
-            // 
-            this.tBLDERSBindingSource.DataMember = "TBLDERS";
-            this.tBLDERSBindingSource.DataSource = this.dbNotKayitDataSet;
-            // 
-            // tBLDERSTableAdapter
-            // 
-            this.tBLDERSTableAdapter.ClearBeforeFill = true;
             // 
             // oGRIDDataGridViewTextBoxColumn
             // 
@@ -403,6 +390,20 @@
             this.dURUMDataGridViewCheckBoxColumn.MinimumWidth = 6;
             this.dURUMDataGridViewCheckBoxColumn.Name = "dURUMDataGridViewCheckBoxColumn";
             // 
+            // tBLDERSBindingSource
+            // 
+            this.tBLDERSBindingSource.DataMember = "TBLDERS";
+            this.tBLDERSBindingSource.DataSource = this.dbNotKayitDataSet;
+            // 
+            // dbNotKayitDataSet
+            // 
+            this.dbNotKayitDataSet.DataSetName = "DbNotKayitDataSet";
+            this.dbNotKayitDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tBLDERSTableAdapter
+            // 
+            this.tBLDERSTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmOgretmenDetay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -426,8 +427,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbNotKayitDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLDERSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbNotKayitDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -435,25 +436,25 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox MskNumara;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtSoyad;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox TxtAd;
+        private System.Windows.Forms.Button BtnKaydet;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox TxtSınav3;
+        private System.Windows.Forms.Button BtnGuncelle;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtSınav2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtSınav1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label LblKalanSayisi;
+        private System.Windows.Forms.Label LblGecenSayisi;
+        private System.Windows.Forms.Label LblOrtalama;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
