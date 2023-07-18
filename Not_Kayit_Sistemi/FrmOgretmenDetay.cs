@@ -29,7 +29,15 @@ namespace Not_Kayit_Sistemi
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
-
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("INSERT INTO TBLDERS (OGRNUMARA, OGRAD, OGRSOYAD) VALUES(@P1,@P2,@P3)",baglanti);
+            komut.Parameters.AddWithValue("@P1", MskNumara.Text);    
+            komut.Parameters.AddWithValue("@P2", TxtAd.Text);
+            komut.Parameters.AddWithValue("@P3", TxtSoyad.Text);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Öğrenci Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.tBLDERSTableAdapter.Fill(this.dbNotKayitDataSet.TBLDERS);
         }
     }
 }
