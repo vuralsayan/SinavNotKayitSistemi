@@ -24,5 +24,14 @@ namespace Not_Kayit_Sistemi
             frm.Show();
             
         }
+
+        private void MskOgrenciNumara_TextChanged(object sender, EventArgs e)
+        {
+            if (MskOgrenciNumara.Text == "1111")
+            {
+                FrmOgretmenDetay fr = new FrmOgretmenDetay();
+                fr.Show();
+            }
+        }
     }
 }

@@ -50,6 +50,7 @@
             this.MskOgrenciNumara.Size = new System.Drawing.Size(121, 30);
             this.MskOgrenciNumara.TabIndex = 1;
             this.MskOgrenciNumara.ValidatingType = typeof(int);
+            this.MskOgrenciNumara.TextChanged += new System.EventHandler(this.MskOgrenciNumara_TextChanged);
             // 
             // button1
             // 
